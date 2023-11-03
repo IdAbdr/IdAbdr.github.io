@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="/css/game.css">
+    <link rel="icon" type="image/x-icon" href="https://avatars.mds.yandex.net/i?id=60ac114338301919563328aa514fd1bd61ec25f9-9229208-images-thumbs&n=13">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/js/game.js"></script>
+    <title>Owl Cafe</title>
+</head>
+
+<body>
+
+    <!--NAV-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">O.Cafe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                            <li><a class="dropdown-item" href="menu.html">Appetizers</a>
+
+                            </li>
+                            <li><a class="dropdown-item" href="menu_o.html">Main Courses</a>
+
+                            </li>
+                            <li><a class="dropdown-item" href="menu_u.html">Desserts</a>
+
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="host.html">Host an event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="location.html">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Модальное окно "Contact" -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>Contact Information</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">Email: example@example.com</li>
+                        <li class="list-group-item">Phone: +1 123-456-7890</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Arrange the letters to make up a word</h1>
+        <p>Hint: If you need a hint, you can try to place the letters in the correct order by the first letter of the word "FLA," and this will help you get started.</p>
+        <p></p>
+        <div id="letters">
+            <div class="letter" data-letter="L">L</div>
+            <div class="letter" data-letter="F">F</div>
+            <div class="letter" data-letter="M">M</div>
+            <div class="letter" data-letter="A">A</div>
+            <div class="letter" data-letter="U">U</div>
+            <div class="letter" data-letter="M">M</div>
+            <div class="letter" data-letter="A">A</div>
+            <div class="letter" data-letter="L">L</div>
+            <div class="letter" data-letter="E">E</div>
+            <div class="letter" data-letter="T">T</div>
+            <div class="letter" data-letter="D">D</div>
+            <!--Flammulated-->
+        </div>
+        <div id="slots">
+            <div class="letter-slot" data-letter="F"></div>
+            <div class="letter-slot" data-letter="L"></div>
+            <div class="letter-slot" data-letter="A"></div>
+            <div class="letter-slot" data-letter="M"></div>
+            <div class="letter-slot" data-letter="M"></div>
+            <div class="letter-slot" data-letter="U"></div>
+            <div class="letter-slot" data-letter="L"></div>
+            <div class="letter-slot" data-letter="A"></div>
+            <div class="letter-slot" data-letter="T"></div>
+            <div class="letter-slot" data-letter="E"></div>
+            <div class="letter-slot" data-letter="D"></div>
+            <!-- Другие слоты для букв -->
+        </div>
+        <hr>
+        <div id="rules">
+            <h2>Rules of the Game</h2>
+            <p>The goal of the game: Collect the letters "F," "L,", "A", etc. and drag them to the corresponding slots.</p>
+            <p>The beginning of the game: At the beginning of the game, the letters "F," "L,", "A", etc. are on the left, and the letter slots are on the right.</p>
+            <p>Dragging: You can drag the letters by clicking and holding on the letter with the mouse. Drag a letter into one of the slots.</p>
+            <p>Check: If a letter is dragged into the correct slot (for example, the letter "F" into the slot for "F"), it locks in place and you move on to the next letter.</p>
+            <p>Game Completion: To complete the game successfully, all letters must be dragged into the correct slots. When all the letters are in the correct slots, a victory message is displayed.</p>
+            <p>Try again: If the letters are dragged into the wrong slots, you can try again by dragging them into the correct slots.</p>
+            <p>Victory: If the letters are not pulled out, you win!</p>
+
+            <p><i>Have fun and enjoy the game!</i></p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
